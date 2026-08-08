@@ -1,7 +1,9 @@
 html, body{
     margin: 0;
     padding: 0;
-    height: 100%;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
     background-image: url("webpage_background.png");
     background-size: cover;
     background-position: center;
@@ -11,7 +13,7 @@ html, body{
 .nav {
     background-color: rgba(180, 130, 70, 0.7);
     width: 100%;
-    height: 10vh;
+    height: 10dvh;
     margin: 0 auto;
 
     position: relative;
@@ -64,7 +66,7 @@ html, body{
 
 .body1 {
     position: relative;
-    height: 90vh;
+    height: 90dvh;
 }
 
 .body1 h1 {
