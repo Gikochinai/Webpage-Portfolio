@@ -30,34 +30,36 @@ html, body{
 
 .nav-links p {
     margin: 0;
-    padding: 10px 20px;
+    padding: 1vh 1.5vw;
 
     text-transform: uppercase;
     font-weight: bold;
     color: white;
+    font-size: clamp(12px, 1.2vw, 18px);
 
     border-radius: 8px;
     cursor: pointer;
 
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
+
     transition: border-color 1s ease, background-color 1s ease;
 }
 
 .nav-links p:hover {
-     border-top-color: white;
-     border-bottom-color: white;
+    border-top-color: white;
+    border-bottom-color: white;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
 .nav-links {
     position: absolute;
-    right: 50px;
+    right: 3vw;
     top: 50%;
     transform: translateY(-50%);
 
     display: flex;
-    gap: 30px;
+    gap: 2vw;
 }
 
 .body1 {
