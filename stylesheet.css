@@ -1,4 +1,13 @@
-html, body{
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #623518;
+}
+
+
+body{
     margin: 0;
     padding: 0;
     width: 100%;
@@ -11,6 +20,7 @@ html, body{
     font-family: 'Glacial Indifference', Futura, sans-serif;
 }
 
+
 .nav {
     background-color: rgba(180, 130, 70, 0.7);
     width: 100%;
@@ -18,6 +28,7 @@ html, body{
     margin: 0 auto;
 
     position: relative;
+    user-select: none;
 }
 
 .nav img{
@@ -49,6 +60,10 @@ html, body{
     transition: border-color 1s ease, background-color 1s ease;
 }
 
+.nav-links a{
+    text-decoration: none;
+}
+
 .nav-links p:hover {
     border-top-color: white;
     border-bottom-color: white;
@@ -65,9 +80,21 @@ html, body{
     gap: 2vw;
 }
 
+
 .body1 {
     position: relative;
     height: 90dvh;
+
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.body1.page-loaded {
+    opacity: 1;
+}
+
+.body1.fade-out {
+    opacity: 0;
 }
 
 .body1 h1 {
@@ -85,8 +112,86 @@ html, body{
     margin: 0;
 }
 
+.container{
+    background-color: rgba(180, 130, 70, 1);
+    height: 65dvh;
+    width: 70dvw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 51px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "Box1 Box2 Box3";
+    gap: clamp(8px, 1vw, 20px);
+    color: white;
+    user-select: none;
+}
 
-@media (max-width: 600px) {
+
+.box1, .box2, .box3{
+    background-color: #3f2416;
+    height: 20dvh;
+    width: 18dvw;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "image"
+    "Txt";
+    border-radius: 51px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box1:hover, .box2:hover, .box3:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.box1 .imageContent1, .box2 .imageContent2, .box3 .imageContent3{
+    grid-area: image;
+}
+
+.box1 .imageContent1{
+    background-image: url("game_title_image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box1 p, .box2 p, .box3 p {
+    grid-area: Txt;
+    width: 80%;
+    margin: auto;
+
+    font-size: clamp(10px, 1.2vw, 18px);
+    line-height: 1.1;
+}
+
+.box1 {
+    grid-area: Box1;
+}
+
+.box2 {
+    grid-area: Box2;
+}
+
+.box3 {
+    grid-area: Box3;
+}
+
+
+
+@media (max-width: 1005px) {
     .nav-links {
         right: 10px;
         gap: 5px;
@@ -96,4 +201,35 @@ html, body{
         font-size: 11px;
         padding: 5px 8px;
     }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "Box1"
+            "Box2"
+            "Box3";
+
+        gap: 10px;
+    }
+
+    .box1, .box2, .box3 {
+        position: relative;
+        margin: auto;
+        top: auto;
+        left: auto;
+
+        width: 80%;
+        height: 18dvh;
+        justify-self: center;
+    }
+
+}
+
+  @media (max-width: 400px){
+
+    .body1 h1 {
+        font-size: clamp(15px, 5vw, 24px);
+    }
+     
 }
