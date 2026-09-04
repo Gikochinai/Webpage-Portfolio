@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 $(document).ready(function() {
     $("#btnDownload").click(function() {
-        window.location.href = "https://mega.nz/folder/0ZNVHSqD#S-vMVD6tQe4Q_KVpOdga5g";
+        window.location.href = "https://mega.nz/folder/RZFCGBIY#7ehgAXJ9l5uFFh4YCJdh3A";
     });
 });
 
