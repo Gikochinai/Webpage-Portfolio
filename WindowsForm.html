@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="webpage_logo.png">
+    <link href="https://cdn.jsdelivr.net/gh/fontalternative/glacial-indifference/font.css" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <a href="index.html"><img src="webpage_logo.png" alt="Logo"></a>
+
+            <div class="nav-links">
+                <a href="PortfolioPage.html"><p>Portfolio</p></a>
+                <a href=""><p>About Me</p></a>
+            </div>
+        </div>
+        <div class="container" id="WF_container">
+            <div class="Frame" id="WindowsForm">
+                <div class="section1" id="WF_section1">
+                    <h4 id="WindowsForm_title">Windows Form & Database</h4>
+                    <h5 id="WFProject_title">C# Windows Forms Cashier System</h5>
+                    <p id="WFDescription">A database-driven cashier system built for my Event-Driven Programming (EDP) project, featuring menu and order management, payment processing, receipt generation, and Private Custom Exception Assembly for input validation. Built with C#, Windows Forms, SQL LocalDB, delegates, multithreading, and file I/O.</p>
+                </div>
+                <div class="section2" id="WF_section2">
+                    <video src="WindowsFormDemo.mp4" controls></video>
+                </div>
+                <div class="section3" id="WF_section3">
+                    <div class="component1" id="WFcm1">
+                        <button class="codeFile active" data-file="Form1.cs">
+                            Form1.cs
+                        </button>
+
+                        <button class="codeFile" data-file="PaymentSystem.cs">
+                            PaymentSystem.cs
+                        </button>
+
+                        <button class="codeFile" data-file="LoadingForm.cs">
+                            LoadingForm.cs
+                        </button>
+
+                        <button class="codeFile" data-file="DelegateClass.cs">
+                            DelegateClass.cs
+                        </button>
+
+                        <button class="codeFile" data-file="CustomExceptionClass.cs">
+                            CustomExceptionClass.cs
+                        </button>
+                        <button class="codeFile" data-file="MenuDB.sql">
+                            MenuDB.sql
+                        </button>
+                    </div>
+                    <div class="component2" id="WFcm2">
+                        <div class="codeWindow">
+
+                            <div class="codeWindowHeader">
+                                <span id="currentFileName">
+                                    Form1.cs
+                                </span>
+                            </div>
+
+                            <div class="codeContent">
+                                <pre><code id="sourceCode">
+                                
+                                </code></pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javaScript.js"></script>
+</body>
+</html>
