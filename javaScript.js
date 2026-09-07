@@ -52,7 +52,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     $(".box3").click(function () {
-        window.location.href = "DataStructures&Algorithms.html";
+        window.location.href = "SortingAlgorithm.html";
     });
 
 });
@@ -100,7 +100,7 @@ codeFiles.forEach(button => {
 if (window.location.pathname.endsWith("WindowsForm.html")) {
     loadCode("Form1.cs");
 }
-else if (window.location.pathname.endsWith("DataStructures&Algorithms.html")) {
+else if (window.location.pathname.endsWith("SortingAlgorithm.html")) {
     loadCode("SortingAlgorithm.cs");
 }
 
